@@ -67,3 +67,8 @@ ion-range::part(bar) {
 ion-range::part(bar-active) {
   background: #bde0fe;
 }
+
+ion-toolbar {
+  --padding-top: 20px;
+  padding-bottom: 20px;
+}

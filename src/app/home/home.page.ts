@@ -42,7 +42,6 @@ export class HomePage {
       await this.imageCompress.uploadFile();
     this.imgResultBeforeCompress = image;
     this.orientation = orientation;
-    console.log('File Name:', fileName);
     console.log(
       `Original: ${image.substring(0, 50)}... (${image.length} characters)`
     );
@@ -71,17 +70,6 @@ export class HomePage {
       )
       .then((result_1: DataUrl) => {
         this.imgResultAfterCompress = result_1;
-        console.log(
-          `Compressed: ${result_1.substring(0, 50)}... (${
-            result_1.length
-          } characters)`
-        );
-        console.log(
-          'Size in bytes is now:',
-          this.imageCompress.byteCount(result_1)
-        );
-        console.log('ratio is ', ratio);
-        console.log('quality  ', quality);
       });
   }
 }
